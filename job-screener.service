@@ -1,0 +1,14 @@
+[Unit]
+Description=job-screener - self-hosted LLM job posting screener
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/job-screener
+ExecStart=/usr/bin/python3 %h/job-screener/server.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

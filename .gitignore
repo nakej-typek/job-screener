@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+
+# your real profile and your verdict history stay local
+profile.md
+screened.jsonl
+*.log
